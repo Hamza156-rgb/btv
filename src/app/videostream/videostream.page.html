@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-row>
+      <ion-back-button icon="arrow-back-circle" color="light">
+      </ion-back-button>
+    </ion-row>
+  
+      
+        
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="9" class="ion-padding-top" push="0.5">
+      <h1 style="color:#A1A1A1;font-size:25px;text-align: left;">BTV GLOBAL</h1>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="clear" class="btn">
+        <ion-icon name="add-circle-sharp" class="icon"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <video controls autoplay height="50%" width="100%" #videoPlayer>
+      <source [src]="config.url + video?.video_path" type="video/mp4">
+    </video>
+
+    <ion-col size="12" push="0.5">
+      <h1 style="color:#BB2F2F;font-size:15px;">{{video?.video_title}}</h1>
+      <h1 style="color:#A1A1A1;font-size:12px;margin-top:-5px">{{video?.video_views | decimals}} views</h1>
+    </ion-col>
+    <ion-col size="2" style="margin-top:-20px">
+      <ion-button fill="clear" class="like-btn" (click)="addLike()">
+        <ion-icon name="thumbs-up-sharp" class="like"></ion-icon>
+      </ion-button>
+      <h1 style="color:#A1A1A1;font-size:12px;margin-top:-5px;margin-left:20px">{{video?.likes | decimals}}</h1>
+    </ion-col>
+
+    <ion-col size="2"></ion-col>
+    <ion-col size="2" style="margin-top:-20px">
+      <ion-button fill="clear" class="like-btn" (click)="addDislike()" >
+        <ion-icon name="thumbs-down-sharp" class="like"></ion-icon>
+      </ion-button>
+      <h1 style="color:#A1A1A1;font-size:12px;margin-top:-5px;margin-left:20px">{{video?.dislikes | decimals}}</h1>
+    </ion-col>
+
+    <ion-col size="2"></ion-col>
+
+    <ion-col size="4" style="margin-top:-20px">
+      <ion-button fill="clear" class="like-btn" >
+        <ion-icon name="arrow-redo-sharp" class="like"></ion-icon>
+      </ion-button>
+      <h1 style="color:#A1A1A1;font-size:12px;margin-top:-5px;margin-left:20px">Share</h1>
+    </ion-col>
+  </ion-row>
+  <br>
+  <hr style="border: 1px solid #A1A1A1;border-width: thin;">
+  <ion-row>
+    <ion-col size="2" style="margin-top:5px">
+      <img src="../../assets/icons/profile.png"/>
+    </ion-col>
+    <ion-col size="6" style="margin-top:-20px">
+      <h1 style="color:#A1A1A1;font-size:12px;">John Doe</h1>
+      <h1 style="color:#A1A1A1;font-size:10px;margin-top:-5px">359k subscribers</h1>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button fill="clear" class="subscribe">
+        <ion-icon name="logo-youtube" class="icon-sub" slot="start"></ion-icon>
+        <span style="color:#A1A1A1;font-size:12px;">Subscribe</span>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  
+  <hr style="border: 1px solid #A1A1A1;border-width: thin;">
+  
+  <ion-row>
+    <ion-col size="6">
+      <img src="../../assets/cards/6.png"/>
+      
+    </ion-col>
+    <ion-col size="6">
+      <h1 style="color:#BB2F2F;font-size:15px;">VIDEO 2</h1>
+      <h2 style="color:#A1A1A1;font-size:10px;margin-top:-5px">John Doe</h2>
+      <h2 style="color:#A1A1A1;font-size:10px;margin-top:-5px">2.3M views</h2>
+    </ion-col>
+
+
+    <ion-col size="6">
+      <img src="../../assets/cards/7.png"/>
+     
+    </ion-col>
+    <ion-col size="6">
+      <h1 style="color:#BB2F2F;font-size:15px;">VIDEO 2</h1>
+      <h2 style="color:#A1A1A1;font-size:10px;margin-top:-5px" >John Doe</h2>
+      <h2 style="color:#A1A1A1;font-size:10px;margin-top:-5px">2.3M views</h2>
+    </ion-col>
+
+
+    <ion-col size="6">
+      <img src="../../assets/cards/8.png"/>
+      
+    </ion-col>
+    <ion-col size="6">
+      <h1 style="color:#BB2F2F;font-size:15px;">VIDEO 2</h1>
+      <h2 style="color:#A1A1A1;font-size:10px;margin-top:-5px">John Doe</h2>
+      <h2 style="color:#A1A1A1;font-size:10px ;margin-top:-5px">2.3M views</h2>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "BtvGlobal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

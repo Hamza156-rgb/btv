@@ -1,0 +1,28 @@
+ion-header{
+    
+    --ion-background-color: #000000;   
+    
+}
+
+ion-content{
+    --ion-background-color: #000000;
+
+    ion-slides{
+        h1{
+            color:#A1A1A1;
+            font-size:10px
+        }
+    }
+
+    .btn{
+       height:120%;
+
+        .icon{
+            font-size:60px;
+            color:#A1A1A1
+        }
+    }
+    
+
+   
+}

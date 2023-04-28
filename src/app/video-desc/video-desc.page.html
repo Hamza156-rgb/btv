@@ -1,0 +1,166 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-back-button icon="arrow-back-circle" color="light">
+      </ion-back-button>
+    </ion-row>
+
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" push="0.5">
+      <h3 style="color:#BB2F2F;font-size:20px;">Select Video</h3>
+      </ion-col>
+    <ion-card class="card1" *ngIf="!selectedVideo">
+  
+      <ion-col size="12" >
+        <ion-button fill="clear" expand="full" style="margin-top:40px" (click)="selectVideo()">
+          <ion-icon name="add-circle" class="icon"></ion-icon>
+        </ion-button>
+      </ion-col>
+      
+     
+    </ion-card>
+
+    <div class="video-section" *ngIf="selectedVideo">
+
+      <video controls [src]="selectedVideo"></video>
+  
+      <div class="button-options" *ngIf="!uploadedVideo && !isUploading">
+        <ion-button fill="clear" (click)="cancelSelection()">
+          <ion-icon name="close-circle" color="danger"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="uploadVideo()">
+          <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+        </ion-button>
+      </div>
+  
+      <div *ngIf="isUploading">
+        <div class="uploading">
+          <p><ion-spinner name="bubbles"></ion-spinner></p>
+          <p>Uploading - {{ uploadPercent }}% Complete</p>
+        </div>
+        <div class="button-options">
+          <ion-button fill="clear" (click)="cancelUpload()">
+            <ion-icon name="close-circle" color="danger"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+  
+      <div class="button-options" *ngIf="uploadedVideo">
+        <ion-button fill="clear" (click)="cancelSelection()">
+          Start Over
+        </ion-button>
+      </div>
+  
+    </div>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" push="0.5">
+      <h3 style="color:#BB2F2F;font-size:20px;">Video Title</h3>
+      </ion-col>
+      <ion-col size="12">
+      <ion-item>
+        <ion-input type="text" placeholder="Title" [(ngModel)]="formData.video_title" ></ion-input>
+        <ion-icon name="pencil" slot="end" color="light"></ion-icon>
+      </ion-item>
+     
+    </ion-col>
+    
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" push="0.5">
+      <h3 style="color:#BB2F2F;font-size:20px;">Video Description</h3>
+      </ion-col>
+      <ion-col size="12">
+      <ion-item>
+        <ion-input type="text" placeholder="Description" [(ngModel)]="formData.video_description" ></ion-input>
+        <ion-icon name="pencil" slot="end" color="light"></ion-icon>
+      </ion-item>
+     
+    </ion-col>
+    
+  </ion-row>
+ 
+
+<ion-row>
+  <ion-col size="12" push="0.5">
+    <h3 style="color:#BB2F2F;font-size:20px;">Select Video Thumbnail</h3>
+    </ion-col>
+      <ion-card class="card2">
+        
+        
+          <ion-button fill="clear" expand="full" style="margin-top:10px">
+            <ion-icon name="add-circle" class="icon"></ion-icon>
+          </ion-button>
+        
+       
+      </ion-card>
+     
+    
+  </ion-row>
+
+  <hr style="border: 1px solid #A1A1A1;border-width: thin;">
+
+  <ion-row *ngIf="!business">
+    <ion-col size="6" push="0.5" >
+      <h1 style="color:#A1A1A1;font-size:12px;">INDIVIDUAL CHANNEL</h1>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button class="business" (click)="goBusiness()">
+        <span style="font-size:10px">
+          CLICK HERE TO GO BUSINESS
+        </span>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" *ngIf="business">
+      <ion-item>
+        <ion-label style="color:#BB2F2F;font-size:15px;" >SELECT BUSINESS</ion-label>
+        <ion-select mode="ios" [(ngModel)]="formData.business" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="mechanic">MECHANIC</ion-select-option>
+          <ion-select-option value="barber">BARBER</ion-select-option>
+          <ion-select-option value="real estate">REAL ESTATE</ion-select-option>
+          <ion-select-option value="bakery">BAKERY</ion-select-option>
+          <ion-select-option value="tv channel">TV CHANNEL</ion-select-option>
+          <ion-select-option value="optional">OTHER</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+    </ion-col>
+  </ion-row>
+
+  <div style="height:10px;"></div>
+  <ion-row>
+    <ion-col size="12" >
+      <ion-item>
+        <ion-label style="color:#BB2F2F;font-size:15px;">SELECT CATEGORY</ion-label>
+        <ion-select mode="ios" [(ngModel)]="formData.category" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="News">News</ion-select-option>
+          <ion-select-option value="Sports">Sports</ion-select-option>
+          <ion-select-option value="Weather">Weather</ion-select-option>
+          <ion-select-option value="Business">Business</ion-select-option>
+          <ion-select-option value="More">More</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+    </ion-col>
+  </ion-row>
+  <hr style="border: 1px solid #A1A1A1;border-width: thin;">
+  <ion-row>
+    <ion-col size="3"></ion-col>
+    <ion-col size="6">
+      <ion-button class="Upload" (click)="uploadVideo()">
+        <span>Upload</span>
+      </ion-button>
+    </ion-col>
+    <ion-col size="3"></ion-col>
+  </ion-row>
+</ion-content>

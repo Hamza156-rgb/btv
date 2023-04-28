@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+  <div style="height:50px"></div>
+  <ion-item class="input">
+    <ion-input type="text" placeholder="Search for Songs, Artists, Genres" style="color:#fff;font-size:15px"></ion-input>
+    <ion-icon name="ellipse-outline" color="light" size="small"></ion-icon>
+  </ion-item>
+
+  <div style="height:120px"></div>
+  <ion-row>
+    <ion-col size="4"></ion-col>
+    <ion-col size="8">
+      <ion-icon name="flash-outline" class="lightning-icon"></ion-icon>
+      <span style="color:#fff;font-size:15px;padding-left:10px">TRENDING</span>
+    </ion-col>
+    
+
+    <ion-col size="4"></ion-col>
+    <ion-col size="4">
+      <ion-button fill="outline" color="light" class="btn" (click)="Trend(1)">
+        <span [ngClass]="NUDISCO ? 'active' : 'nonactive'">NU DISCO</span>
+        </ion-button>
+    </ion-col>
+    <ion-col size="4"></ion-col>
+
+
+    <ion-col size="3"></ion-col>
+    <ion-col size="3">
+      <ion-button fill="outline" color="light" class="btn" (click)="Trend(2)">
+        <span [ngClass]="EDM ? 'active' : 'nonactive'">EDM</span>
+        </ion-button>
+    </ion-col>
+
+    <ion-col size="6">
+     <ion-button fill="outline" color="light" class="btn" (click)="Trend(3)">
+       <span [ngClass]="ROCK ? 'active' : 'nonactive'">ROCK/RETRO</span>
+     </ion-button>
+   </ion-col>
+   
+
+   <ion-col size="3"></ion-col>
+   <ion-col size="4">
+     <ion-button fill="outline" color="light" class="btn" (click)="Trend(4)">
+       <span [ngClass]="BIGROOM ? 'active' : 'nonactive'">BIGROOM</span>
+     </ion-button>
+   </ion-col>
+
+   <ion-col size="5">
+    <ion-button fill="outline" color="light" class="btn" (click)="Trend(5)">
+      <span [ngClass]="POP ? 'active' : 'nonactive'">POP</span>
+     </ion-button>
+  </ion-col>
+  
+    
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="4"></ion-col>
+    <ion-col size="8">
+      <ion-icon name="reload-sharp" class="recent-icon"></ion-icon>
+      <span style="color:#fff;font-size:15px;padding-left:10px">RECENT ONES</span>
+    </ion-col>
+    
+
+    <ion-col size="3"></ion-col>
+    <ion-col size="5">
+      <ion-button fill="outline" color="light" class="btn" (click)="Recent(1)">
+        <span [ngClass]="PROGRESSIVE ? 'active' : 'nonactive'">PROGRESSIVE</span>
+        </ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button fill="outline" color="light" class="btn" (click)="Recent(2)">
+        <span [ngClass]="RNB ? 'active' : 'nonactive'">RNB</span>
+        </ion-button>
+    </ion-col>
+
+
+    <ion-col size="3"></ion-col>
+
+    <ion-col size="6">
+     <ion-button fill="outline" color="light" class="btn" (click)="Recent(3)">
+       <span [ngClass]="HIPHOP ? 'active' : 'nonactive'">HIP HOP</span>
+     </ion-button>
+   </ion-col>
+   
+  </ion-row>
+</ion-content>

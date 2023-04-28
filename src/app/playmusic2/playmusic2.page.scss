@@ -1,0 +1,45 @@
+ion-header{
+    
+    --ion-background-color: #000000;   
+    
+   .btn{
+       --border-radius:50px;
+       height:60px;
+       .icon{
+           color:#50E3C2;
+       }
+   }
+
+   .selected{
+       color:#C036D0;
+       font-size:30px;
+   }
+   .notselected{
+       color:gray;
+       font-size:30px;
+   }
+}
+
+ion-content{
+    --ion-background-color: #000000;
+    
+.playBtn{
+    --border-radius:50px;
+    height:60px;
+    width:60px;
+    --background:#50E3C2;
+}
+.more{
+    height:60%;
+    .more-icon{
+        font-size:30px;
+             color:#fff;
+             margin-top:30px
+    }
+}
+  
+.Qbtn{
+    width:100%;
+    --border-radius:40px;
+}
+}

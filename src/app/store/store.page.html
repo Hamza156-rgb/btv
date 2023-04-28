@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-row>
+      <ion-back-button icon="arrow-back-circle" color="light">
+      </ion-back-button>
+    </ion-row>
+  
+        <ion-row class="ion-padding-top">
+          <ion-col size="12">
+            <ion-title style="color:#A1A1A1;font-size:26px;text-align: left;">STORE</ion-title>
+          </ion-col>
+          <ion-col size="12">
+            <ion-searchbar class="box" placeholder="Search All Items"></ion-searchbar>
+          </ion-col>
+          
+        </ion-row>
+        
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="height:50px"></div>
+
+
+<ion-row>
+  <ion-col size="4" *ngFor="let a of categories">
+    <ion-card>
+      <img src="https:localhost/btvglobalAdmin/{{a.cat_picture}}"/>
+      <h1 style="color:#A1A1A1;font-size:15px;margin-top:-20px;text-align: center;">{{a.cat_name}}</h1>
+    </ion-card>
+   
+  </ion-col>
+</ion-row>
+
+</ion-content>

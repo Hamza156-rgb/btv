@@ -1,0 +1,80 @@
+<ion-header >
+  <ion-toolbar>
+    
+    <ion-row>
+      <ion-back-button icon="arrow-back-circle" color="light">
+      </ion-back-button>
+    </ion-row>
+  
+        <ion-row>
+          <ion-title style="color:#BB2F2F;font-size:16px;text-align: left;">VIDEO CATEGORIES</ion-title>
+        </ion-row>
+        
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-slides  [options]="slideOpts">
+    <ion-slide>
+      <h1>NEWS</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>SPORTS</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>WEATHER</h1>
+    </ion-slide>
+
+    <ion-slide>
+      <h1>BUSINESS</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>MORE</h1>
+    </ion-slide>
+    
+  </ion-slides> -->
+  <ion-slides  [options]="slideOpts">
+    <ion-slide  *ngFor="let a of videosCategories;let idx = index" (click)= "getCategoryVideos(a.category_id)">
+      <h1>{{a?.category_name}}</h1>
+    </ion-slide>
+  
+    
+  </ion-slides>
+  <ion-row>
+    <ion-col size="2"></ion-col>
+    <ion-col size="8" >
+      <ion-button expand="full" fill="clear" class="btn" (click)="uploadVideo()">
+        <ion-icon name="add-circle" class="icon"></ion-icon>
+      </ion-button>
+
+      <h1 style="color:#BB2F2F;font-size:15px;text-align: center;margin-top:-10px">UPLOAD YOUR VIDEOS</h1>
+    </ion-col>
+    <ion-col size="2"></ion-col>
+  </ion-row>
+ <div style="height:50px"></div>
+  <hr style="border: 1px solid #A1A1A1;border-width: thin;">
+
+  <ion-row>
+    <ion-col size="12" push="1">
+      <h1 style="color:#A1A1A1;font-size:15px;font-weight: bolder;">Explore Other Videos</h1>
+    </ion-col>
+  </ion-row>
+    <ion-row *ngFor="let a of videos" (click)="goToVideo(a)">
+      <ion-col size="6">
+        <img [src]="config.imgUrl + a.path"/>
+        
+      </ion-col>
+      <ion-col size="6">
+        <h1 style="color:#BB2F2F;font-size:15px;">{{a.video_title}}</h1>
+        <h2 style="color:#A1A1A1;font-size:10px;margin-top:-5px">{{a.first_name}} {{a.last_name}}</h2>
+        <h2 style="color:#A1A1A1;font-size:10px;margin-top:-5px">{{a.video_views | decimals}} views</h2>
+      </ion-col>
+    </ion-row>
+
+
+  <!-- <ion-row *ngFor="let a of videos">
+    <video controls autoplay height="50%" width="100%" #videoPlayer>
+      <source [src]="config.yourSiteUrl + a.video_link" type="video/mp4">
+    </video>
+    </ion-row> -->
+</ion-content>

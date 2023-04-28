@@ -1,0 +1,26 @@
+ion-header{
+    
+    --ion-background-color: #000000;   
+    
+    .btn{
+        --border-radius:40px;
+
+    }
+
+    .active{
+        color:#fff;
+    }
+    .nonactive{
+        color:#A1A1A1;
+    }
+}
+
+ion-content{
+    --ion-background-color: #000000;
+    
+ion-card{
+    height:200px;
+    width:100%;
+}
+  
+}

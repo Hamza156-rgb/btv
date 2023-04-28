@@ -1,0 +1,48 @@
+ion-header{
+    
+    --ion-background-color: #000000;   
+    
+   .btn{
+       --border-radius:50px;
+       height:60px;
+       .icon{
+           color:#50E3C2;
+       }
+   }
+
+  
+}
+
+ion-content{
+    --ion-background-color: #000000;
+    
+    .playbtn{
+        height:80%;
+        --border-radius:40px;
+        
+                 .play-icon{
+                     font-size:20px;
+                     color:#50E3C2
+                 } 
+         
+        }
+    
+        .more{
+            height:60%;
+            .more-icon{
+                font-size:30px;
+                     color:#A1A1A1;
+                     margin-top:30px
+            }
+        }
+.cancel{
+    --border-radius:40px;
+    
+    .cancel-icon{
+        color:#fff;
+        font-size:20px;
+        
+    }
+}
+  
+}

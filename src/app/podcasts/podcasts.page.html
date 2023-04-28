@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-row>
+      <ion-back-button icon="arrow-back-circle" color="light">
+      </ion-back-button>
+    </ion-row>
+  
+        <ion-row class="ion-padding-top">
+          <ion-col size="12">
+            <ion-title style="color:#A1A1A1;font-size:26px;text-align: left;">PODCASTS</ion-title>
+          </ion-col>
+          </ion-row>
+
+          <ion-row>
+         <ion-col size="3">
+           <ion-button fill="outline" color="light" class="btn" (click)="Edm(1)">
+             <span [ngClass]="EDM ? 'active' : 'nonactive'">EDM</span>
+             </ion-button>
+         </ion-col>
+
+         <ion-col size="6">
+          <ion-button fill="outline" color="light" class="btn" (click)="Edm(2)">
+            <span [ngClass]="ROCK ? 'active' : 'nonactive'">ROCK/RETRO</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="3"></ion-col>
+
+
+        <ion-col size="5">
+          <ion-button fill="outline" color="light" class="btn" (click)="Edm(3)">
+            <span [ngClass]="PROGRESSIVE ? 'active' : 'nonactive'">PROGRESSIVE</span>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="3">
+         <ion-button fill="outline" color="light" class="btn" (click)="Edm(4)">
+           <span [ngClass]="RNB ? 'active' : 'nonactive'">RNB</span>
+          </ion-button>
+       </ion-col>
+       <ion-col size="3">
+         <ion-button fill="clear" color="light" class="btn" (click)="more()">
+         <span style="color:#50E3C2">+ More</span>
+        </ion-button></ion-col>
+        </ion-row>
+        
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-row >
+  <ion-col size="6" (click)="playmusic()">
+    <ion-card>
+      <img src="../../assets/cards/27.png"/>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="6">
+    <ion-card>
+      <img src="../../assets/cards/28.png"/>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="6">
+    <ion-card>
+      <img src="../../assets/cards/29.png"/>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="6">
+    <ion-card>
+      <img src="../../assets/cards/30.png"/>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+</ion-content>

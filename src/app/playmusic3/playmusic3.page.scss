@@ -1,0 +1,69 @@
+
+
+ion-header{
+    
+    --ion-background-color: #2C2939;   
+    
+   .btn{
+       --border-radius:50px;
+       height:60px;
+       .icon{
+           color:#50E3C2;
+       }
+   }
+   .backBtn{
+       position:absolute;
+   }
+
+   .selected{
+       color:#C036D0;
+       font-size:30px;
+   }
+   .notselected{
+       color:gray;
+       font-size:30px;
+   }
+
+   ion-list{
+    opacity: 80%;
+    ion-item{
+        --ion-background-color: transparent !important;
+       }
+   }
+   .playlist{
+       --border-radius:20px;
+       height:30px;
+       .playlist-icon{
+           color:#50E3C2;
+       }
+   }
+
+ 
+   
+}
+
+ion-content{
+    --ion-background-color: #2C2939;
+    .more{
+        height:20%;
+        .more-icon{
+            font-size:30px;
+                 color:#fff;
+                 
+        }
+    }
+    
+.playBtn{
+    --border-radius:50px;
+    height:60px;
+    width:60px;
+    --background:#50E3C2;
+}
+
+  
+.Qbtn{
+    opacity: 60%;
+    width:100%;
+    --border-radius:40px;
+}
+}

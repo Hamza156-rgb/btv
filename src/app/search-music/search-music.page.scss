@@ -1,0 +1,60 @@
+
+
+ion-header{
+    
+    --ion-background-color: #000;   
+    
+ 
+   
+}
+
+ion-content{
+    --background: url(../../assets/cards/BG.png);
+    --background-repeat: no-repeat;
+    --background-size: cover;  
+
+    .input{
+        --background:transparent;
+        border: 1px solid gray;
+        width:95%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align:center;
+    }
+    @media screen and (min-width: 390px) {
+        .input{
+            --background:transparent;
+            border: 1px solid gray;
+            width:85%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            text-align:center;
+        }
+    
+    }
+
+    
+    .lightning-icon{
+        color:#50E3C2;
+        font-size:20px;
+        margin-top:10px;
+    }
+    .recent-icon{
+        color: #fff;
+        font-size:20px;
+        margin-top:10px;
+    }
+
+
+    .btn{
+        --border-radius:40px;
+
+    }
+    .active{
+        color:#fff;
+    }
+    .nonactive{
+        color:#A1A1A1;
+    }
+}
+

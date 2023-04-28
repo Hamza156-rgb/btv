@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Broadcaster</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button
+  *ngIf="!isBroadcasting && !isPending"
+  (click)="start()">
+  Start
+</ion-button>
+
+<ion-button
+  *ngIf="isBroadcasting && !isPending"
+  (click)="stop()"
+  color="danger">
+  Stop
+</ion-button>
+</ion-content>

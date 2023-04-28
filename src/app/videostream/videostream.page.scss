@@ -1,0 +1,51 @@
+ion-header{
+    
+    --ion-background-color: #000000;   
+    
+}
+
+ion-content{
+    --ion-background-color: #000000;
+
+    .btn{
+        height:120%;
+    .icon{
+        font-size:40px;
+            color:#A1A1A1
+    }
+
+}
+.card1{
+    background-image: url('../../assets/cards/14.png') ;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:200px;
+    border-radius: 20px;
+ display: inline-block;
+}
+
+.btn1{
+    height:20%;
+.icon1{
+    font-size:30px;
+        color:#A1A1A1
+}
+}
+
+.like-btn{
+    height:120%;
+
+    .like{
+        font-size:30px;
+        color:#A1A1A1
+    }
+}
+.subscribe{
+    height:30%;
+    .icon-sub{
+        color:#A1A1A1;
+        
+    }
+}
+}

@@ -1,0 +1,84 @@
+<ion-header >
+  <ion-toolbar style="padding-top:20px">
+    <ion-row>
+      <ion-col size="12">
+        <ion-title style="color:#BB2F2F;font-size:20px">EXPLORE OUR PLATFORMS</ion-title>
+        
+      </ion-col>
+      <ion-col size="12" push="1">
+        <p style="color:#A1A1A1;font-size:10px">all your favorite</p>
+        <p style="color:#A1A1A1;font-size:10px;margin-top:-10px"> items under one roof!</p>
+        
+      </ion-col>
+      <ion-col size="12">
+        <ion-searchbar class="box" placeholder="Search All Items"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col size="4" (click)="navToVideoCat()">
+      <img src="/assets/cards/1.png"/>
+      <h1 style="color:#BB2F2F;font-size:15px;padding-left:10px">
+      BTV GLOBAL
+      <span style="color:#A1A1A1;font-size:12px">
+      EXPLORE VIDEOS
+      </span>
+      </h1>
+    </ion-col>
+    <ion-col size="4" (click)="navToStore()">
+      <img src="/assets/cards/3.png"/>
+      <h1 style="color:#BB2F2F;font-size:15px;padding-left:10px">
+        STORE <br>
+        <span style="color:#A1A1A1;font-size:12px">
+        BUY ANYTHING
+        </span>
+        </h1>
+    </ion-col>
+    <ion-col size="4" (click)="navToMovies()">
+      <img src="/assets/cards/2.png"/>
+      <h1 style="color:#BB2F2F;font-size:15px;padding-left:10px">
+        MOVIES <br>
+        <span style="color:#A1A1A1;font-size:12px">
+        WATCH NOW
+        </span>
+        </h1>
+    </ion-col>
+  </ion-row>
+
+  <div style="height:50px"></div>
+  <ion-row >
+    <ion-col size="4" (click)="navToRadio()">
+      <img src="/assets/cards/4.png"/>
+      <h1 style="color:#BB2F2F;font-size:15px;padding-left:10px">
+      BTV RADIO
+      <span style="color:#A1A1A1;font-size:12px">
+      LISTEN RADIO
+      </span>
+      </h1>
+    </ion-col>
+    <ion-col size="4" (click)="navToPodcasts()">
+      <img src="/assets/cards/5.png"/>
+      <h1 style="color:#BB2F2F;font-size:15px;padding-left:10px">
+        BTV PODS <br>
+        <span style="color:#A1A1A1;font-size:12px">
+        LISTEN NOW
+        </span>
+        </h1>
+    </ion-col>
+    <ion-col size="4" (click)="navToNews()">
+      <img src="/assets/cards/4.png"/>
+      <h1 style="color:#BB2F2F;font-size:15px;padding-left:10px">
+        HIGHLIGHTS 
+        <span style="color:#A1A1A1;font-size:12px">
+        WATCH NOW
+        </span>
+        </h1>
+    </ion-col>
+  </ion-row>
+</ion-content>
